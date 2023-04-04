@@ -11,21 +11,21 @@
 
 import random
 
-n = int(input("Сколько чисел будет в массиве: "))
-x = int(input("От какого числа отталкиваться: "))
+n = 4#int(input("Сколько чисел будет в массиве: "))
+x = 2#int(input("От какого числа отталкиваться: "))
 
 lst = [random.randint(0, 9) for i in range(n)]
 print(lst)
 
 result = lst[0]
-temp = 1
+
 for i in range(len(lst)):
     if lst[i] == x:
         result = lst[i]
-    else:             # гдето я путаюсь и понимаю что не тем путем иду
-        if lst[i]+temp == x or lst[i]-temp == x:
+    else:            
+        if lst[i]+ == x or lst[i]- == x:
             result = lst[i]
-        else:   
-                temp+=1
+            break
+        
                 
 print(result)
