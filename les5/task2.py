@@ -13,7 +13,7 @@ def sum_a_b (a, b):
     if b != 0:
         return (sum_a_b(a + 1, b - 1))
     
-a = int(input('Число?: '))
-b = int(input('В степени?: '))
+a = int(input('Число a: '))
+b = int(input('Число b: '))
 
 print(sum_a_b(a, b))
