@@ -23,7 +23,7 @@ for i in range(len(lst)):
     if lst[i] == x:
         result = lst[i]
     else:            
-        if lst[i]+ == x or lst[i]- == x:
+        if lst[i]+1 == x or lst[i]-1 == x:
             result = lst[i]
             break
         
