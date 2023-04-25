@@ -7,6 +7,7 @@ import json
 
 
 def find_contact(contacts: list) -> dict:
+    print('find')
     what = input('Кого ищем?\n>>> ')
     found = list(filter(lambda el: what in el['first_name'] or what in el['second_name'], contacts))
     if found:
@@ -61,6 +62,7 @@ def new_contact(contacts: list) -> None:
         contacts=input('Введите номер телефона:\n>>> ')
     )
 )
+    print('cont+')
 
 
 def menu():
@@ -95,11 +97,11 @@ def main() -> None:
     data = load_from_file()
 
     command = menu()
-    if command == 0:
+    if command == 1:
         show_on_screen(data)
-    elif command == 1:
-        find_contact(data)
     elif command == 2:
+        find_contact(data) 
+    elif command == 3:
         new_contact(data)
 
     save_to_file(data)
